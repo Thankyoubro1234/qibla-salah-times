@@ -1,0 +1,3 @@
+-keepattributes Signature, *Annotation*, EnclosingMethod, InnerClasses
+-keep class com.prayerpilot.app.data.** { *; }
+-dontwarn org.jetbrains.annotations.**

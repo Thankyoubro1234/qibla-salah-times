@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:windowBackground">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView android:id="@+id/tv_today"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="22sp" android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <TextView android:id="@+id/tv_hijri"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="15sp" android:alpha="0.85"
+            android:layout_marginTop="4dp" android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="22dp"
+            app:cardBackgroundColor="@color/google_blue"
+            android:layout_marginBottom="20dp">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:padding="24dp">
+                <TextView android:id="@+id/tv_next_label"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Next: Fajr" android:textColor="#CCEAFF"
+                    android:textSize="16sp"/>
+                <TextView android:id="@+id/tv_countdown"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="--:--:--" android:textColor="#FFFFFF"
+                    android:textSize="56sp" android:textStyle="bold"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="22dp" app:cardElevation="6dp"
+            android:layout_marginBottom="14dp">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:padding="22dp">
+
+                <include layout="@layout/item_prayer_row"
+                    android:id="@+id/row_fajr"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="14dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/fajr"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_fajr"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:text="--:--"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="14dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/sunrise"
+                        android:textSize="18sp"/>
+                    <TextView android:id="@+id/tv_sunrise"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:text="--:--"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="14dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/dhuhr"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_dhuhr"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:text="--:--"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="14dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/asr"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_asr"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:text="--:--"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="14dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/maghrib"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_maghrib"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:text="--:--"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginVertical="14dp"/>
+
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="@string/isha"
+                        android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tv_isha"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="18sp" android:text="--:--"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

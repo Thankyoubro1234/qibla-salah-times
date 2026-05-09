@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.QiblaSalahTimes" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/neon_blue</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="colorSecondary">@color/neon_green</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+    </style>
+    <style name="Theme.QiblaSalahTimes.NoActionBar" parent="Theme.QiblaSalahTimes">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

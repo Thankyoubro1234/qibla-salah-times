@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.QiblaSalahTimes" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/google_blue</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">@color/google_blue_dark</item>
+        <item name="colorSecondary">@color/google_green</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+        <item name="android:textColorPrimary">@color/text_primary_light</item>
+        <item name="android:textColorSecondary">@color/text_secondary_light</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Theme.QiblaSalahTimes.NoActionBar" parent="Theme.QiblaSalahTimes">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">8dp</item>
+        <item name="contentPadding">20dp</item>
+    </style>
+    <style name="HeadingXL">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+    </style>
+    <style name="HeadingL">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+    <style name="Body">
+        <item name="android:textSize">17sp</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+</resources>

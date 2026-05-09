@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qibla Salah Times</string>
+    <string name="settings">Settings</string>
+
+    <string name="onboarding_title">Welcome to Qibla Salah Times</string>
+    <string name="onboarding_subtitle">Your hyper local prayer companion. We use your location for street level accurate prayer times.</string>
+    <string name="onboarding_cta">Allow location and continue</string>
+
+    <string name="tab_prayer">Prayer</string>
+    <string name="tab_ramadan">Ramadan</string>
+    <string name="tab_qibla">Qibla</string>
+    <string name="tab_quran">Quran</string>
+    <string name="tab_community">Community</string>
+
+    <string name="next_prayer">Next prayer</string>
+    <string name="fajr">Fajr</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isha</string>
+
+    <string name="ramadan_today">Ramadan today</string>
+    <string name="suhoor_ends">Suhoor ends</string>
+    <string name="iftar_at">Iftar at</string>
+    <string name="fasted_today">I fasted today</string>
+    <string name="sadaqah_given">I gave sadaqah today</string>
+    <string name="taraweeh_rakaat">Taraweeh rakaat</string>
+    <string name="quran_pages">Quran pages read</string>
+    <string name="save">Save</string>
+
+    <string name="qibla_title">Qibla compass</string>
+    <string name="quran_title">Quran</string>
+    <string name="dhikr_counter">Dhikr counter</string>
+    <string name="dua_journal">Dua journal</string>
+    <string name="add_dua">Add a new dua</string>
+    <string name="reset">Reset</string>
+    <string name="tap_to_count">Tap to count</string>
+</resources>

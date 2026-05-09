@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="methods">
+        <item>Muslim World League</item>
+        <item>ISNA (North America)</item>
+        <item>Egyptian General Authority</item>
+        <item>Umm al-Qura (Makkah)</item>
+        <item>University of Karachi</item>
+        <item>Tehran Institute</item>
+        <item>Shia Ithna Ashari (Jafari)</item>
+        <item>Singapore</item>
+        <item>France</item>
+        <item>Diyanet (Turkey)</item>
+        <item>Russia</item>
+    </string-array>
+    <string-array name="method_values">
+        <item>MWL</item><item>ISNA</item><item>EGYPT</item><item>MAKKAH</item>
+        <item>KARACHI</item><item>TEHRAN</item><item>JAFARI</item><item>SINGAPORE</item>
+        <item>FRANCE</item><item>TURKEY</item><item>RUSSIA</item>
+    </string-array>
+    <string-array name="asr_entries"><item>Standard (Shafii, Maliki, Hanbali)</item><item>Hanafi</item></string-array>
+    <string-array name="asr_values"><item>STANDARD</item><item>HANAFI</item></string-array>
+    <string-array name="hl_entries"><item>None</item><item>Middle of the night</item><item>One seventh</item><item>Angle based</item></string-array>
+    <string-array name="hl_values"><item>NONE</item><item>MIDNIGHT</item><item>ONE_SEVENTH</item><item>ANGLE_BASED</item></string-array>
+    <string-array name="voice_entries"><item>Makkah Adhan</item><item>Madinah Adhan</item><item>Soft beep only</item><item>Vibration only</item></string-array>
+    <string-array name="voice_values"><item>makkah</item><item>madinah</item><item>beep</item><item>vibrate</item></string-array>
+    <string-array name="theme_entries"><item>Follow system</item><item>Light</item><item>Dark (neon)</item></string-array>
+    <string-array name="theme_values"><item>system</item><item>light</item><item>dark</item></string-array>
+</resources>

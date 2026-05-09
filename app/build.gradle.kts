@@ -6,14 +6,14 @@ plugins {
 
 android {
     namespace = "com.prayerpilot.app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.qiblasalahtimes.app"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 7
-        versionName = "1.3.1"
+        targetSdk = 35
+        versionCode = 8
+        versionName = "1.3.2"
         vectorDrawables { useSupportLibrary = true }
     }
 

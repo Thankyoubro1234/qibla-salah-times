@@ -2,48 +2,111 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory app:title="Prayer calculation">
-        <ListPreference app:key="method" app:title="Calculation method"
+    <PreferenceCategory app:title="Prayer calculation"
+        app:iconSpaceReserved="false">
+        <ListPreference app:key="method"
+            app:title="Calculation method"
+            app:summary="%s"
             app:entries="@array/methods" app:entryValues="@array/method_values"
-            app:defaultValue="ISNA"/>
-        <ListPreference app:key="asr" app:title="Asr juristic"
+            app:defaultValue="ISNA"
+            app:iconSpaceReserved="false"/>
+        <ListPreference app:key="asr"
+            app:title="Asr juristic"
+            app:summary="%s"
             app:entries="@array/asr_entries" app:entryValues="@array/asr_values"
-            app:defaultValue="STANDARD"/>
-        <ListPreference app:key="highlat" app:title="High latitude rule"
+            app:defaultValue="STANDARD"
+            app:iconSpaceReserved="false"/>
+        <ListPreference app:key="highlat"
+            app:title="High latitude rule"
+            app:summary="%s"
             app:entries="@array/hl_entries" app:entryValues="@array/hl_values"
-            app:defaultValue="ANGLE_BASED"/>
+            app:defaultValue="ANGLE_BASED"
+            app:iconSpaceReserved="false"/>
+        <SwitchPreferenceCompat app:key="time_24h"
+            app:title="24 hour time"
+            app:summary="Show prayer times in 24 hour format"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Notifications">
+    <PreferenceCategory app:title="Notifications"
+        app:iconSpaceReserved="false">
         <SwitchPreferenceCompat app:key="notif_enabled"
             app:title="Adhan notifications"
-            app:defaultValue="true"/>
+            app:summary="Send a notification at every prayer time"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"/>
         <ListPreference app:key="notif_mode"
             app:title="Notification mode"
-            app:summary="How prayer time alerts behave"
+            app:summary="%s"
             app:entries="@array/notif_mode_entries"
             app:entryValues="@array/notif_mode_values"
-            app:defaultValue="full"/>
+            app:defaultValue="full"
+            app:iconSpaceReserved="false"/>
         <ListPreference app:key="adhan_voice"
             app:title="Adhan voice"
-            app:summary="Used when notification mode is Full Adhan"
+            app:summary="%s"
             app:entries="@array/voice_entries"
             app:entryValues="@array/voice_values"
-            app:defaultValue="makkah"/>
+            app:defaultValue="makkah"
+            app:iconSpaceReserved="false"/>
         <Preference app:key="adhan_preview"
             app:title="Preview Adhan"
-            app:summary="Tap to preview the selected voice"/>
+            app:summary="Hear the selected voice"
+            app:iconSpaceReserved="false"/>
         <SeekBarPreference app:key="pre_remind_min"
-            app:title="Pre prayer reminder minutes"
-            app:defaultValue="0" android:max="30"/>
+            app:title="Pre prayer reminder"
+            app:summary="Minutes before each prayer"
+            app:defaultValue="0" android:max="30"
+            app:iconSpaceReserved="false"/>
         <SwitchPreferenceCompat app:key="auto_dnd"
-            app:title="Auto Do Not Disturb during prayer"
-            app:summary="Silence the phone for ten minutes after each prayer time"/>
+            app:title="Auto Do Not Disturb"
+            app:summary="Silence the phone during prayer"
+            app:iconSpaceReserved="false"/>
+        <SwitchPreferenceCompat app:key="daily_verse"
+            app:title="Daily verse notification"
+            app:summary="Receive a verse of the day every morning"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false"/>
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Appearance">
-        <ListPreference app:key="theme" app:title="Theme"
+    <PreferenceCategory app:title="Appearance"
+        app:iconSpaceReserved="false">
+        <ListPreference app:key="theme"
+            app:title="Theme"
+            app:summary="%s"
             app:entries="@array/theme_entries" app:entryValues="@array/theme_values"
-            app:defaultValue="system"/>
+            app:defaultValue="system"
+            app:iconSpaceReserved="false"/>
+        <ListPreference app:key="accent"
+            app:title="Accent color"
+            app:summary="%s"
+            app:entries="@array/accent_entries" app:entryValues="@array/accent_values"
+            app:defaultValue="blue"
+            app:iconSpaceReserved="false"/>
+        <ListPreference app:key="language"
+            app:title="App language"
+            app:summary="%s"
+            app:entries="@array/language_entries" app:entryValues="@array/language_values"
+            app:defaultValue="en"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="About"
+        app:iconSpaceReserved="false">
+        <Preference app:key="share_app"
+            app:title="Share Qibla Salah Times"
+            app:summary="Tell friends and family"
+            app:iconSpaceReserved="false"/>
+        <Preference app:key="rate_app"
+            app:title="Rate the app"
+            app:summary="Open Google Play"
+            app:iconSpaceReserved="false"/>
+        <Preference app:key="version"
+            app:title="Version"
+            app:iconSpaceReserved="false"/>
+        <Preference app:key="open_source"
+            app:title="View source on GitHub"
+            app:iconSpaceReserved="false"/>
     </PreferenceCategory>
 </PreferenceScreen>

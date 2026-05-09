@@ -42,4 +42,28 @@
 
     <string-array name="theme_entries"><item>Follow system</item><item>Light</item><item>Dark (neon)</item></string-array>
     <string-array name="theme_values"><item>system</item><item>light</item><item>dark</item></string-array>
+    <string-array name="accent_entries">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Violet</item>
+        <item>Cyan</item>
+        <item>Pink</item>
+    </string-array>
+    <string-array name="accent_values">
+        <item>blue</item><item>green</item><item>violet</item><item>cyan</item><item>pink</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>English</item>
+        <item>Arabic - العربية</item>
+        <item>Urdu - اردو</item>
+        <item>French - Français</item>
+        <item>Spanish - Español</item>
+        <item>Turkish - Türkçe</item>
+        <item>Indonesian - Bahasa Indonesia</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>en</item><item>ar</item><item>ur</item><item>fr</item>
+        <item>es</item><item>tr</item><item>id</item>
+    </string-array>
 </resources>

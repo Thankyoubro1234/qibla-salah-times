@@ -27,6 +27,10 @@ class PrayerRepository(private val ctx: Context) {
     private val K_NOTIF_ENABLED = booleanPreferencesKey("notif_enabled")
     private val K_NOTIF_MODE = stringPreferencesKey("notif_mode")
     private val K_THEME = stringPreferencesKey("theme")
+    private val K_LAST_SURAH_ID = intPreferencesKey("last_surah_id")
+    private val K_LAST_SURAH_NAME = stringPreferencesKey("last_surah_name")
+    private val K_QURAN_FONT_SIZE = intPreferencesKey("quran_font_size")
+
     private val K_FIRST_RUN = booleanPreferencesKey("first_run")
 
     suspend fun setLocation(loc: Location) {
@@ -72,4 +76,16 @@ class PrayerRepository(private val ctx: Context) {
     suspend fun getAutoDnd(): Boolean = ctx.dataStore.data.first()[K_AUTO_DND] ?: false
     suspend fun getPreRemind(): Int = ctx.dataStore.data.first()[K_PRE_REMIND] ?: 0
     suspend fun isNotifEnabled(): Boolean = ctx.dataStore.data.first()[K_NOTIF_ENABLED] != false
+
+    suspend fun setLastReadSurah(id: Int, name: String) = ctx.dataStore.edit {
+        it[K_LAST_SURAH_ID] = id
+        it[K_LAST_SURAH_NAME] = name
+    }
+    suspend fun getLastReadSurah(): Pair<Int, String>? {
+        val p = ctx.dataStore.data.first()
+        val id = p[K_LAST_SURAH_ID]; val nm = p[K_LAST_SURAH_NAME]
+        return if (id != null && nm != null) id to nm else null
+    }
+    suspend fun getQuranFontSize(): Int = ctx.dataStore.data.first()[K_QURAN_FONT_SIZE] ?: 22
+    suspend fun setQuranFontSize(sz: Int) = ctx.dataStore.edit { it[K_QURAN_FONT_SIZE] = sz }
 }

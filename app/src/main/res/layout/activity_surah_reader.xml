@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSurface"
+        app:title=""
+        app:titleTextAppearance="@style/Heading"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_hero_violet"
+        android:padding="20dp">
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_play"
+                android:layout_width="0dp" android:layout_height="56dp"
+                android:layout_weight="1.2"
+                android:text="@string/quran_play"
+                app:cornerRadius="28dp"
+                app:icon="@drawable/ic_play_arrow"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1F2D44"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reciter"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp" android:layout_height="56dp"
+                android:layout_weight="2"
+                android:layout_marginStart="10dp"
+                android:textColor="#FFFFFF"
+                android:strokeColor="#80FFFFFF"
+                app:cornerRadius="28dp"/>
+        </LinearLayout>
+    </FrameLayout>
+
     <LinearLayout android:orientation="horizontal"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:padding="14dp" android:gravity="center_vertical">
-        <Button android:id="@+id/btn_play"
+        android:padding="14dp" android:gravity="center_vertical"
+        android:background="?attr/colorSurfaceVariant">
+        <ImageView android:layout_width="20dp" android:layout_height="20dp"
+            android:src="@drawable/ic_text_size"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="Font size"/>
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_font"
             android:layout_width="0dp" android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/quran_play"/>
-        <Button android:id="@+id/btn_reciter"
-            android:layout_width="0dp" android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginStart="10dp"
-            android:text="@string/quran_pick_reciter"/>
+            android:valueFrom="16"
+            android:valueTo="36"
+            android:stepSize="1"
+            android:value="22"/>
+        <TextView android:id="@+id/tv_font_size_label"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="13sp" android:alpha="0.7"
+            android:layout_marginStart="6dp" android:text="22sp"/>
     </LinearLayout>
 
     <ProgressBar android:id="@+id/progress"

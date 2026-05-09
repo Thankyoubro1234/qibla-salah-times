@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.QiblaSalahTimes" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">@color/neon_blue</item>
-        <item name="colorOnPrimary">#000000</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.QiblaSalahTimes" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neon_cyan</item>
+        <item name="colorOnPrimary">#001F2A</item>
+        <item name="colorPrimaryContainer">@color/g_blue_dark</item>
+        <item name="colorOnPrimaryContainer">#E0EAFF</item>
         <item name="colorSecondary">@color/neon_green</item>
-        <item name="colorOnSecondary">#000000</item>
-        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="colorOnSecondary">#003910</item>
+        <item name="colorSecondaryContainer">@color/g_green_dark</item>
+        <item name="colorTertiary">@color/neon_violet</item>
+        <item name="colorSurface">@color/bg_card_dark</item>
+        <item name="colorOnSurface">@color/text_primary_dark</item>
+        <item name="colorSurfaceVariant">@color/bg_card_dark_alt</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary_dark</item>
+        <item name="android:windowBackground">@drawable/bg_aurora</item>
         <item name="android:textColorPrimary">@color/text_primary_dark</item>
         <item name="android:textColorSecondary">@color/text_secondary_dark</item>
-    </style>
-    <style name="Theme.QiblaSalahTimes.NoActionBar" parent="Theme.QiblaSalahTimes">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="bottomNavigationStyle">@style/BottomNav.Modern</item>
+        <item name="materialCardViewStyle">@style/Card.Modern</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
+    <style name="Theme.QiblaSalahTimes.NoActionBar" parent="Theme.QiblaSalahTimes"/>
 </resources>

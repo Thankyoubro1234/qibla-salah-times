@@ -72,8 +72,20 @@ class QiblaCompassView @JvmOverloads constructor(
         // North needle (red, smaller)
         drawArrow(c, cx, cy, r * 0.85f, 0f - deviceAzimuth, 18f, northPaint)
 
-        // Qibla arrow (green, dominant)
-        drawArrow(c, cx, cy, r * 0.95f, qiblaBearing - deviceAzimuth, 36f, qiblaPaint)
+        // Qibla arrow (green, dominant) with Kaaba symbol at tip
+        val qAng = Math.toRadians((qiblaBearing - deviceAzimuth - 90).toDouble())
+        val tipDist = r * 0.95f
+        val tipX = cx + tipDist * Math.cos(qAng).toFloat()
+        val tipY = cy + tipDist * Math.sin(qAng).toFloat()
+        drawArrow(c, cx, cy, r * 0.85f, qiblaBearing - deviceAzimuth, 24f, qiblaPaint)
+        // Kaaba: small black square with gold band
+        val k = 28f
+        val kaabaBg = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.parseColor("#0F1730") }
+        val kaabaBlk = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.parseColor("#0A0A0A") }
+        val gold = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.parseColor("#FBBF24") }
+        c.drawCircle(tipX, tipY, k, kaabaBg)
+        c.drawRect(tipX - k*0.55f, tipY - k*0.55f, tipX + k*0.55f, tipY + k*0.55f, kaabaBlk)
+        c.drawRect(tipX - k*0.55f, tipY - 2f, tipX + k*0.55f, tipY + 2f, gold)
 
         // Center dot
         c.drawCircle(cx, cy, 18f, center)

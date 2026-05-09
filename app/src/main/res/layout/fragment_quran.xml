@@ -1,28 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:padding="0dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout android:orientation="vertical"
         android:layout_width="match_parent" android:layout_height="match_parent">
 
+        <!-- Header -->
         <LinearLayout android:orientation="vertical"
             android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:padding="20dp" android:paddingTop="32dp">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="@string/quran_title"
-                android:textSize="22sp" android:textStyle="bold"/>
+                style="@style/HeadingL"
+                android:textColor="?android:attr/textColorPrimary"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:text="@string/quran_subtitle"
-                android:textSize="14sp" android:alpha="0.75"
+                style="@style/Body"
+                android:textColor="?android:attr/textColorSecondary"
                 android:layout_marginTop="4dp"/>
         </LinearLayout>
+
+        <!-- Last read banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_last_read"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="22dp"
+            android:visibility="gone">
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:background="@drawable/bg_hero_violet"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                    android:src="@drawable/ic_bookmark_white" android:layout_marginEnd="14dp"/>
+                <LinearLayout android:orientation="vertical"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Continue reading"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.08"
+                        android:textColor="#D8C8FF"/>
+                    <TextView android:id="@+id/tv_last_read"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:textSize="17sp" android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+                <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_right_white"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Search -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="6dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:hint="Search surah by name or number"
+            app:boxCornerRadiusBottomEnd="22dp"
+            app:boxCornerRadiusBottomStart="22dp"
+            app:boxCornerRadiusTopEnd="22dp"
+            app:boxCornerRadiusTopStart="22dp"
+            app:startIconDrawable="@drawable/ic_search">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_surahs"
             android:layout_width="match_parent" android:layout_height="match_parent"
             android:clipToPadding="false"
             android:paddingHorizontal="14dp"
+            android:paddingTop="6dp"
             android:paddingBottom="20dp"/>
     </LinearLayout>
 

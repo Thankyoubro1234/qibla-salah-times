@@ -57,6 +57,12 @@ class QiblaFragment : Fragment(), SensorEventListener {
             view.findViewById<TextView>(R.id.tv_calibration_status).text =
                 "Magnetic declination: ${"%+.1f".format(magneticDeclination)}°"
         }
+
+        view.findViewById<android.widget.Button>(R.id.btn_recalibrate)?.setOnClickListener {
+            android.widget.Toast.makeText(requireContext(),
+                "Wave the phone in a figure 8 a few times to recalibrate.",
+                android.widget.Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun onResume() {

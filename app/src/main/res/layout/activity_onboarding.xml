@@ -6,9 +6,10 @@
     android:gravity="center" android:padding="32dp"
     android:background="@drawable/onboarding_gradient">
 
-    <ImageView android:layout_width="160dp" android:layout_height="160dp"
-        android:src="@mipmap/ic_launcher" android:layout_marginBottom="40dp"
-        android:contentDescription="@string/app_name"/>
+    <ImageView android:layout_width="180dp" android:layout_height="180dp"
+        android:src="@mipmap/ic_launcher" android:layout_marginBottom="32dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="16dp"/>
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="@string/onboarding_title"
@@ -16,12 +17,13 @@
         android:textSize="34sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:letterSpacing="-0.02"
+        android:layout_marginBottom="16dp"/>
 
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:text="@string/onboarding_subtitle"
         android:textColor="#D9E5FF"
-        android:textSize="18sp"
+        android:textSize="17sp"
         android:gravity="center"
         android:lineSpacingExtra="6sp"
         android:layout_marginBottom="48dp"/>
@@ -30,8 +32,19 @@
         android:id="@+id/btn_get_started"
         android:layout_width="match_parent" android:layout_height="64dp"
         android:text="@string/onboarding_cta"
-        android:textSize="17sp"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:cornerRadius="32dp"
-        android:backgroundTint="@color/neon_blue"
-        android:textColor="#000000"/>
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#0B57D0"
+        app:icon="@drawable/ic_arrow_right_dark"
+        app:iconGravity="end"/>
+
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#A0B5DA"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text="Your location stays on this device. We never share it."/>
 </LinearLayout>

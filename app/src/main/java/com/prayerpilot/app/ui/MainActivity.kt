@@ -8,7 +8,10 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.prayerpilot.app.PrayerPilotApp
 import com.prayerpilot.app.R
-import com.prayerpilot.app.fragments.*
+import com.prayerpilot.app.fragments.PrayerFragment
+import com.prayerpilot.app.fragments.QiblaFragment
+import com.prayerpilot.app.fragments.QuranFragment
+import com.prayerpilot.app.fragments.SettingsFragment
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -30,10 +33,9 @@ class MainActivity : AppCompatActivity() {
         nav.setOnItemSelectedListener { item ->
             val frag: Fragment = when (item.itemId) {
                 R.id.tab_prayer -> PrayerFragment()
-                R.id.tab_ramadan -> RamadanFragment()
                 R.id.tab_qibla -> QiblaFragment()
                 R.id.tab_quran -> QuranFragment()
-                R.id.tab_community -> CommunityFragment()
+                R.id.tab_settings -> SettingsFragment()
                 else -> PrayerFragment()
             }
             supportFragmentManager.beginTransaction()

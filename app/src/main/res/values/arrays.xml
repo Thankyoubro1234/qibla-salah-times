@@ -22,8 +22,24 @@
     <string-array name="asr_values"><item>STANDARD</item><item>HANAFI</item></string-array>
     <string-array name="hl_entries"><item>None</item><item>Middle of the night</item><item>One seventh</item><item>Angle based</item></string-array>
     <string-array name="hl_values"><item>NONE</item><item>MIDNIGHT</item><item>ONE_SEVENTH</item><item>ANGLE_BASED</item></string-array>
-    <string-array name="voice_entries"><item>Makkah Adhan</item><item>Madinah Adhan</item><item>Soft beep only</item><item>Vibration only</item></string-array>
-    <string-array name="voice_values"><item>makkah</item><item>madinah</item><item>beep</item><item>vibrate</item></string-array>
+
+    <string-array name="notif_mode_entries">
+        <item>Full Adhan audio</item>
+        <item>Silent (visual only)</item>
+        <item>Vibration only</item>
+        <item>Soft beep</item>
+    </string-array>
+    <string-array name="notif_mode_values">
+        <item>full</item><item>silent</item><item>vibrate</item><item>beep</item>
+    </string-array>
+
+    <string-array name="voice_entries">
+        <item>Sheikh Ali Mullah of Makkah</item>
+        <item>Sheikh Abdul Hamid of Madinah</item>
+        <item>Sheikh Mishary Rashid Alafasy</item>
+    </string-array>
+    <string-array name="voice_values"><item>makkah</item><item>madinah</item><item>mishary</item></string-array>
+
     <string-array name="theme_entries"><item>Follow system</item><item>Light</item><item>Dark (neon)</item></string-array>
     <string-array name="theme_values"><item>system</item><item>light</item><item>dark</item></string-array>
 </resources>

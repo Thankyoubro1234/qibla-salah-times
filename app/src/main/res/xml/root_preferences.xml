@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <PreferenceCategory app:title="Prayer calculation">
         <ListPreference app:key="method" app:title="Calculation method"
             app:entries="@array/methods" app:entryValues="@array/method_values"
@@ -12,17 +13,34 @@
             app:entries="@array/hl_entries" app:entryValues="@array/hl_values"
             app:defaultValue="ANGLE_BASED"/>
     </PreferenceCategory>
-    <PreferenceCategory app:title="Adhan and reminders">
-        <SwitchPreferenceCompat app:key="notif_enabled" app:title="Adhan notifications"
+
+    <PreferenceCategory app:title="Notifications">
+        <SwitchPreferenceCompat app:key="notif_enabled"
+            app:title="Adhan notifications"
             app:defaultValue="true"/>
-        <ListPreference app:key="adhan_voice" app:title="Adhan voice"
-            app:entries="@array/voice_entries" app:entryValues="@array/voice_values"
+        <ListPreference app:key="notif_mode"
+            app:title="Notification mode"
+            app:summary="How prayer time alerts behave"
+            app:entries="@array/notif_mode_entries"
+            app:entryValues="@array/notif_mode_values"
+            app:defaultValue="full"/>
+        <ListPreference app:key="adhan_voice"
+            app:title="Adhan voice"
+            app:summary="Used when notification mode is Full Adhan"
+            app:entries="@array/voice_entries"
+            app:entryValues="@array/voice_values"
             app:defaultValue="makkah"/>
-        <SeekBarPreference app:key="pre_remind_min" app:title="Pre prayer reminder minutes"
+        <Preference app:key="adhan_preview"
+            app:title="Preview Adhan"
+            app:summary="Tap to preview the selected voice"/>
+        <SeekBarPreference app:key="pre_remind_min"
+            app:title="Pre prayer reminder minutes"
             app:defaultValue="0" android:max="30"/>
-        <SwitchPreferenceCompat app:key="auto_dnd" app:title="Auto Do Not Disturb during prayer"
-            app:summary="Automatically silence your phone for 10 minutes after each prayer time"/>
+        <SwitchPreferenceCompat app:key="auto_dnd"
+            app:title="Auto Do Not Disturb during prayer"
+            app:summary="Silence the phone for ten minutes after each prayer time"/>
     </PreferenceCategory>
+
     <PreferenceCategory app:title="Appearance">
         <ListPreference app:key="theme" app:title="Theme"
             app:entries="@array/theme_entries" app:entryValues="@array/theme_values"

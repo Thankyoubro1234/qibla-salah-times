@@ -25,6 +25,7 @@ class PrayerRepository(private val ctx: Context) {
     private val K_AUTO_DND = booleanPreferencesKey("auto_dnd")
     private val K_PRE_REMIND = intPreferencesKey("pre_remind_min")
     private val K_NOTIF_ENABLED = booleanPreferencesKey("notif_enabled")
+    private val K_NOTIF_MODE = stringPreferencesKey("notif_mode")
     private val K_THEME = stringPreferencesKey("theme")
     private val K_FIRST_RUN = booleanPreferencesKey("first_run")
 
@@ -67,6 +68,7 @@ class PrayerRepository(private val ctx: Context) {
     suspend fun setTheme(t: String) = ctx.dataStore.edit { it[K_THEME] = t }
 
     suspend fun getAdhanVoice(): String = ctx.dataStore.data.first()[K_ADHAN_VOICE] ?: "makkah"
+    suspend fun getNotifMode(): String = ctx.dataStore.data.first()[K_NOTIF_MODE] ?: "full"
     suspend fun getAutoDnd(): Boolean = ctx.dataStore.data.first()[K_AUTO_DND] ?: false
     suspend fun getPreRemind(): Int = ctx.dataStore.data.first()[K_PRE_REMIND] ?: 0
     suspend fun isNotifEnabled(): Boolean = ctx.dataStore.data.first()[K_NOTIF_ENABLED] != false

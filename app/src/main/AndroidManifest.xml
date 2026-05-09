@@ -55,6 +55,11 @@
         <activity android:name=".ui.PrayerDetailActivity"
             android:exported="false"/>
 
+        <activity android:name=".ui.SurahReaderActivity"
+            android:exported="false"
+            android:label="@string/quran_title"/>
+
+
         <activity android:name=".ui.SettingsActivity"
             android:exported="false"
             android:label="@string/settings"/>

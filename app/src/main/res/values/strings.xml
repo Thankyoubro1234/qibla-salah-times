@@ -8,10 +8,8 @@
     <string name="onboarding_cta">Allow location and continue</string>
 
     <string name="tab_prayer">Prayer</string>
-    <string name="tab_ramadan">Ramadan</string>
     <string name="tab_qibla">Qibla</string>
     <string name="tab_quran">Quran</string>
-    <string name="tab_community">Community</string>
 
     <string name="next_prayer">Next prayer</string>
     <string name="fajr">Fajr</string>
@@ -21,20 +19,30 @@
     <string name="maghrib">Maghrib</string>
     <string name="isha">Isha</string>
 
-    <string name="ramadan_today">Ramadan today</string>
-    <string name="suhoor_ends">Suhoor ends</string>
-    <string name="iftar_at">Iftar at</string>
-    <string name="fasted_today">I fasted today</string>
-    <string name="sadaqah_given">I gave sadaqah today</string>
-    <string name="taraweeh_rakaat">Taraweeh rakaat</string>
-    <string name="quran_pages">Quran pages read</string>
-    <string name="save">Save</string>
-
     <string name="qibla_title">Qibla compass</string>
-    <string name="quran_title">Quran</string>
-    <string name="dhikr_counter">Dhikr counter</string>
-    <string name="dua_journal">Dua journal</string>
-    <string name="add_dua">Add a new dua</string>
-    <string name="reset">Reset</string>
-    <string name="tap_to_count">Tap to count</string>
+    <string name="qibla_calibration_needed">Wave your phone in a figure 8 to calibrate the compass</string>
+    <string name="qibla_accuracy_high">Compass accuracy is high</string>
+    <string name="qibla_accuracy_medium">Compass accuracy is medium</string>
+    <string name="qibla_accuracy_low">Compass accuracy is low. Move away from metal objects and calibrate.</string>
+
+    <string name="quran_title">The Holy Quran</string>
+    <string name="quran_subtitle">All 114 surahs with modern English translation and audio recitation</string>
+    <string name="quran_play">Play</string>
+    <string name="quran_pause">Pause</string>
+    <string name="quran_pick_reciter">Pick a reciter</string>
+    <string name="quran_loading">Loading verses…</string>
+    <string name="quran_offline_warning">Internet needed for Quran audio and translations</string>
+
+    <string name="notif_mode">Notification mode</string>
+    <string name="notif_mode_full">Full Adhan audio</string>
+    <string name="notif_mode_silent">Silent (visual only)</string>
+    <string name="notif_mode_vibrate">Vibration only</string>
+    <string name="notif_mode_beep">Soft beep</string>
+
+    <string name="adhan_voice_title">Adhan voice</string>
+    <string name="adhan_makkah">Sheikh Ali Mullah of Makkah</string>
+    <string name="adhan_madinah">Sheikh Abdul Hamid of Madinah</string>
+    <string name="adhan_mishary">Sheikh Mishary Rashid Alafasy</string>
+    <string name="adhan_preview">Preview</string>
+    <string name="adhan_stop">Stop</string>
 </resources>

@@ -21,7 +21,7 @@ object HijriDate {
         val l3 = l2 - ((30L - j) / 15L).toInt() * ((17719L * j) / 50L).toInt() -
                 (j / 16).toInt() * ((15238L * j) / 43L).toInt() + 29
         val month = ((24L * l3) / 709L).toInt()
-        val day = (l3 - ((709L * month) / 24L).toInt())
+        val day = (l3 - ((709L * month) / 24L).toInt()).toInt()
         val year = 30 * n + j - 30
         return Triple(year, month, day)
     }

@@ -21,11 +21,37 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 8.7
+
+      - name: Decode release keystore
+        run: |
+          echo "${{ secrets.RELEASE_KEYSTORE_BASE64 }}" | base64 -d > $GITHUB_WORKSPACE/release.jks
+          echo "RELEASE_KEYSTORE_FILE=$GITHUB_WORKSPACE/release.jks" >> $GITHUB_ENV
+
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon --stacktrace
-      - name: Upload APK artifact
+        env:
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+          RELEASE_KEY_ALIAS:         ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD:      ${{ secrets.RELEASE_KEY_PASSWORD }}
+
+      - name: Build release AAB (signed)
+        run: gradle bundleRelease --no-daemon --stacktrace
+        env:
+          RELEASE_KEYSTORE_FILE:     ${{ env.RELEASE_KEYSTORE_FILE }}
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+          RELEASE_KEY_ALIAS:         ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD:      ${{ secrets.RELEASE_KEY_PASSWORD }}
+
+      - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
           name: QiblaSalahTimes-debug
           path: app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+
+      - name: Upload release AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: QiblaSalahTimes-release-aab
+          path: app/build/outputs/bundle/release/*.aab
           retention-days: 30

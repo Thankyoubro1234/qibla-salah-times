@@ -5,6 +5,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import com.prayerpilot.app.data.PrayerRepository
+import com.google.android.gms.ads.MobileAds
 
 class PrayerPilotApp : Application() {
     val repository by lazy { PrayerRepository(this) }
@@ -12,6 +13,7 @@ class PrayerPilotApp : Application() {
     override fun onCreate() {
         super.onCreate()
         createNotificationChannels()
+        MobileAds.initialize(this) { }
     }
 
     private fun createNotificationChannels() {

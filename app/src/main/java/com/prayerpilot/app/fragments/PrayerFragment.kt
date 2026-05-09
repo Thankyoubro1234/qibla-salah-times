@@ -64,6 +64,7 @@ class PrayerFragment : Fragment() {
         items.forEachIndexed { i, (name, hours, accent) ->
             val card = LayoutInflater.from(requireContext())
                 .inflate(R.layout.item_prayer_card, container, false) as MaterialCardView
+            val isSunrise = name == "Sunrise"
             card.findViewById<View>(R.id.accent_bar).setBackgroundColor(
                 requireContext().resources.getColor(accent, requireContext().theme))
             card.findViewById<TextView>(R.id.tv_p_name).text = name
@@ -93,9 +94,13 @@ class PrayerFragment : Fragment() {
             }
             // Mark prayed
             if (prayedToday.contains(name)) check.alpha = 1f
-            check.setOnClickListener {
-                if (prayedToday.add(name)) check.alpha = 1f
-                else { prayedToday.remove(name); check.alpha = 0.35f }
+            if (isSunrise) {
+                check.visibility = View.GONE
+            } else {
+                check.setOnClickListener {
+                    if (prayedToday.add(name)) check.alpha = 1f
+                    else { prayedToday.remove(name); check.alpha = 0.35f }
+                }
             }
             container.addView(card)
         }
